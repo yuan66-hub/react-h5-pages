@@ -1,0 +1,30 @@
+<!--
+ * @Author: 'yuanjianming' '1743394015@qq.com'
+ * @Date: 2022-11-14 10:11:21
+ * @LastEditors: 'yuanjianming' '1743394015@qq.com'
+ * @LastEditTime: 2022-11-14 12:19:44
+ * @FilePath: \react-demo-h5\public\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title></title>
+  <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
+    <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet" type="text/css" media="all" />
+    <% } %>
+</head>
+
+<body>
+  <!-- 容器节点 -->
+  <div id="root"></div>
+  <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+</body>
+
+</html>
