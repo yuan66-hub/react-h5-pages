@@ -15,3 +15,9 @@
 ```bash
   yarn run build:pre
 ```
+
+## 三.导出分析报告
+
+```bash
+  yarn run build:analy
+```
