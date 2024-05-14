@@ -27,6 +27,7 @@ module.exports = {
   entry, // 入口文件
   optimization: {
     nodeEnv: false,
+    minimize: true,
     usedExports: true, //收集的信息由其他优化或代码生成使用，即不为未使用的导出
   },
   // 打包文件出口
