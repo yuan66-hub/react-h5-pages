@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development  MODE=development node ./build/utils/dev.js",
     "build:prod": "cross-env NODE_ENV=production MODE=production node ./build/utils/build.js",
-    "build:pre": "cross-env NODE_ENV=production MODE=preview node ./build/utils/build.js",
+    "build:pre": "cross-env NODE_ENV=production MODE=preview  node ./build/utils/build.js",
     "build:analy": "cross-env NODE_ENV=production webpack -c build/webpack.analy.js"
   },
   "keywords": [],
@@ -70,6 +70,7 @@
     "webpack": "^5.91.0",
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^5.1.4",
+    "webpack-dashboard": "^3.3.8",
     "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.10.0",
     "webpackbar": "^5.0.2"
@@ -82,7 +83,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.0",
-    "static-site-generator-webpack-plugin": "^3.4.2",
     "swiper": "^8.4.4"
   }
 }

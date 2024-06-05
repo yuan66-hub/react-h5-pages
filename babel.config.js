@@ -21,12 +21,12 @@ module.exports = {
   ],
   plugins: [
     isDEV && require.resolve('react-refresh/babel'), // 如果是开发模式,就启动react热更新插件
-    // 解决es5冗余代码
     [
       '@babel/plugin-transform-runtime',
       {
-        corejs: 3, // 指定 runtime-corejs 的版本，目前有 2 3 两个版本
-        useESModules: true,
+        helpers: true, // 对辅助函数的复用，解决es5冗余代码
+        corejs: false, //防止 @babel/preset-env corejs转换函数冲突
+        regenerator: false, //代码中没用到 Generator/async 函数，则不引入，设置false,防止 @babel/preset-env regenerator 函数冲突
       },
     ],
   ].filter(Boolean), // 过滤空值

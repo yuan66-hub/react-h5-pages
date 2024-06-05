@@ -13,6 +13,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 // const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+// const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const globAll = require('glob-all')
 const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
@@ -72,6 +73,7 @@ const webpackConfig = merge(baseConfig, {
     //   crawl: true,
     // }),
     //  文件压缩 gzip
+    // new DashboardPlugin(),
     new CompressionPlugin({
       test: /.(js|css)$/, // 只生成css,js压缩文件
       filename: '[path][base].gz', // 文件命名
