@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
-    require('autoprefixer'),
+    require('tailwindcss'), // css 原子化
+    require('autoprefixer'), // css 属性  默认 兼容.browserslistrc or package.json "browserslist"
     require('postcss-px-to-viewport')({
       viewportWidth: 750, // 定义转换时的 基准宽度（ui设计稿的宽度）
       unitPrecision: 2, // 计算时保留的最大小数位数

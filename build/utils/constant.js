@@ -14,7 +14,7 @@ const chalk = require('chalk')
 const BASE_PROT = 9000
 
 // 多页面入口文件夹中的路径
-const PAGESPATH = '../../src/pages'
+const PAGESPATH = '../../src/app'
 
 // 打印时颜色
 const error = chalk.bold.red

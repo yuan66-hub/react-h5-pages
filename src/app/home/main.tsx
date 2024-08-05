@@ -1,5 +1,5 @@
 import React from 'react'
-// import 'normalize.css'
+import '@/main.css'
 import { createRoot } from 'react-dom/client'
 const root = document.getElementById('root')
 const App = React.lazy(() => import('./App'))
