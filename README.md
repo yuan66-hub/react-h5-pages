@@ -4,16 +4,22 @@
   yarn install
 ```
 
-## 二.运行开发环境
+## 二.运行(app/pages)开发环境
 
 ```bash
-  yarn run dev
+  // app 模式
+  yarn run dev:app
+  // pages 模式
+  yarn run dev:pages
 ```
 
-## 三.打包测试环境
+## 三.打包(app/pages)测试环境
 
 ```bash
+  // app 模式
   yarn run build:pre
+  // pages 模式
+  yarn run build:pages
 ```
 
 ## 四.导出分析报告
