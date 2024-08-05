@@ -381,6 +381,6 @@ module.exports = {
                               'extensions': ['.js', '.jsx']
                             },
                               // 禁止未使用的变量
-                              'no-unused-vars': 0,
+                              'no-unused-vars': 'off',
   }
 };
