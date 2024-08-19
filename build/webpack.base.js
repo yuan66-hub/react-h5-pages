@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
+
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isDev = process.env.NODE_ENV === 'development' // 是否是开发模式
@@ -131,5 +133,20 @@ module.exports = {
       filename: 'static/css/[name].[contenthash:8].css', // 加上[contenthash:8]
     }),
     ...htmlPlugins,
+    UnpluginInjectPreload({
+        files:[
+          {
+            entryMatch: /\.(png|jpg|jpeg)$/,
+            outputMatch:/\.(png|jpg|jpeg)$/,
+            attributes: {
+              'type': 'image/png',
+              'as': 'image',
+              'fetchpriority':'high',
+              'crossorigin': 'anonymous',
+            }
+        }
+      ],
+      // injectTo: 'head-prepend'
+    })
   ],
 }

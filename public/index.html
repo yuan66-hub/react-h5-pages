@@ -17,6 +17,7 @@
   <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
     <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet" type="text/css" media="all" />
     <% } %>
+      <!--__unplugin-inject-preload__-->
 </head>
 
 <body>
