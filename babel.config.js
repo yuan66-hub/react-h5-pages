@@ -35,5 +35,9 @@ module.exports = {
         regenerator: false, //代码中没用到 Generator/async 函数，则不引入，设置false,防止 @babel/preset-env regenerator 函数冲突
       },
     ],
+    // ??
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    // 可选链 ?.
+    '@babel/plugin-proposal-optional-chaining'
   ].filter(Boolean), // 过滤空值
 }
