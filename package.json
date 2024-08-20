@@ -17,11 +17,14 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.19.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.13",
+    "@prerenderer/webpack-plugin": "^5.3.10",
     "@types/lodash-es": "^4.17.6",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
@@ -55,6 +58,7 @@
     "postcss-px-to-viewport": "^1.1.1",
     "postcss-pxtorem": "^6.0.0",
     "prettier-eslint": "^15.0.1",
+    "puppeteer": "^23.1.0",
     "purgecss-webpack-plugin": "^5.0.0",
     "react-refresh": "^0.14.0",
     "speed-measure-webpack-plugin": "^1.5.0",
@@ -82,8 +86,6 @@
     "webpackbar": "^5.0.2"
   },
   "dependencies": {
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
-    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "ahooks": "^3.7.1",
     "axios": "^0.27.2",
     "lodash-es": "^4.17.21",

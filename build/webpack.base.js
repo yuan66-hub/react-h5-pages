@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
+// https://github.com/Tofandel/prerenderer/tree/master 无头浏览器渲染生成html输出到文件系统
+const PrerendererWebpackPlugin = require('@prerenderer/webpack-plugin')
 
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
