@@ -2,8 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
 // https://github.com/Tofandel/prerenderer/tree/master 无头浏览器渲染生成html输出到文件系统
-const PrerendererWebpackPlugin = require('@prerenderer/webpack-plugin')
-
+// const PrerendererWebpackPlugin = require('@prerenderer/webpack-plugin')
+// const PrerendererWebpackPlugin = require('../plugins/prerenderer-webpack-plugin')
+// const { webpackPlugin } = require('../plugins/unplugin-watch-file.cjs')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isDev = process.env.NODE_ENV === 'development' // 是否是开发模式
@@ -44,7 +45,6 @@ module.exports = {
   cache: {
     type: 'filesystem', // 使用文件缓存
   },
-
   module: {
     rules: [
       {
@@ -135,11 +135,13 @@ module.exports = {
       filename: 'static/css/[name].[contenthash:8].css', // 加上[contenthash:8]
     }),
     ...htmlPlugins,
+    // webpackPlugin(),
+    // new PrerendererWebpackPlugin(),
     UnpluginInjectPreload({
         files:[
           {
-            entryMatch: /\.(png|jpg|jpeg)$/,
-            outputMatch:/\.(png|jpg|jpeg)$/,
+            entryMatch: /\.(png)$/,
+            outputMatch:/\.(png)$/,
             attributes: {
               'type': 'image/png',
               'as': 'image',
