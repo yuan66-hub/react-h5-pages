@@ -44,7 +44,7 @@ function runParallel(packages) {
 
 async function build(buildLists) {
   const stringLists = buildLists.join(separator)
-  await execa('webpack', ['--config', './build/webpack.prod.js'], {
+  await execa('webpack', ['--config', './build/webpack.prod.js','--no-cache'], {
     stdio: 'inherit',
     env: {
       packages: stringLists,

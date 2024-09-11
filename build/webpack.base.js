@@ -5,6 +5,8 @@ const UnpluginInjectPreload = require('unplugin-inject-preload/webpack')
 // const PrerendererWebpackPlugin = require('@prerenderer/webpack-plugin')
 // const PrerendererWebpackPlugin = require('../plugins/prerenderer-webpack-plugin')
 // const { webpackPlugin } = require('../plugins/unplugin-watch-file.cjs')
+// const WebpackObfuscator = require('webpack-obfuscator');
+
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isDev = process.env.NODE_ENV === 'development' // 是否是开发模式
