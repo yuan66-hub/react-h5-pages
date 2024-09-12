@@ -3592,6 +3592,13 @@
   resolved "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+"@yuanjianming/unplugin-image-convert@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmmirror.com/@yuanjianming/unplugin-image-convert/-/unplugin-image-convert-1.0.5.tgz#eb2b7157602c1584598f4684b52b77a17bbf06cc"
+  integrity sha512-LN8tgb+2/442DNJGPdRYg/1tikEPTp+xWKfVOdR9GfPw0XlS2LfdPY+XYAm3d9LmbY3OizsygKjf9iC9DjlfsQ==
+  dependencies:
+    sharp "^0.33.5"
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"

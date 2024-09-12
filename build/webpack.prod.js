@@ -13,7 +13,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 // const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-// const { webpackImageConvert } =require('../plugins/unplugin-image-convert.js')
+const { webpackImageConvert } =require('@yuanjianming/unplugin-image-convert')
 // const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 // const DashboardPlugin = require('webpack-dashboard/plugin')
 // const WebpackObfuscator = require('../plugins/webpack-obfuscator-plugin.js')
@@ -165,6 +165,7 @@ const webpackConfig = merge(baseConfig, {
         },
       ],
     }),
+    webpackImageConvert(),
     new WebpackObfuscator({
       compact: true,//紧凑输出
       controlFlowFlattening: true,//启用代码控制流扁平化。控制流扁平化是源代码的结构转换，它阻碍了程序的理解
