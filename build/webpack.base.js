@@ -65,7 +65,16 @@ module.exports = {
         include: [path.resolve(__dirname, '../src')],
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader, // 开发环境使用style-looader,打包模式抽离css
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                auto: (resourcePath) => resourcePath.endsWith('.module.css'),  // 匹配.less文件来进行css模块化。
+                localIdentName: '[local]_[hash:base64:10]',
+              },
+            },
+          },
           'postcss-loader',
         ],
       },
@@ -74,7 +83,16 @@ module.exports = {
         include: [path.resolve(__dirname, '../src')],
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader, // 开发环境使用style-looader,打包模式抽离css
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: {
+                auto: (resourcePath) => resourcePath.endsWith('.module.less'),  // 匹配.less文件来进行css模块化。
+                localIdentName: '[local]_[hash:base64:10]',
+              },
+            },
+          },
           'postcss-loader',
           'less-loader',
         ],

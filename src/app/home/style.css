@@ -1,6 +1,0 @@
-.home {
-  @apply text-3xl font-bold underline;
-}
-.vip {
-  @apply w-32 h-32 object-contain;
-}
