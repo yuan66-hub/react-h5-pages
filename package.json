@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:rspack": "cross-env NODE_ENV=development  MODE=development node ./build/rspack/utils/app-dev.js",
-    "build:rspack": "rspack build",
     "dev:pages": "node ./build/utils/pages-dev.js",
     "build:pages": "umi build",
     "dev:app": "cross-env NODE_ENV=development  MODE=development node ./build/utils/app-dev.js",
