@@ -1,5 +1,5 @@
-const { getEntryTemplate } = require('../utils/helper')
-const { separator } = require('../utils/constant')
+const { getEntryTemplate } = require('./utils/helper')
+const { separator } = require('./utils/constant')
 const packages = process.env.packages.split(separator)
 const ReactRefreshPlugin = require('@rspack/plugin-react-refresh');
 const CompressionPlugin = require('compression-webpack-plugin')
@@ -151,10 +151,9 @@ module.exports = {
                 ],
             },
             {
-                test: /.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
+                resource: /\.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
                 type: 'asset', 
                 parser: {
-                    namedExports:true,
                     dataUrlCondition: {
                         maxSize: 10 * 1024, // 小于10kb转base64位
                     },
