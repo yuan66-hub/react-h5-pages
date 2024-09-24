@@ -152,14 +152,14 @@ module.exports = {
             },
             {
                 resource: /\.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
-                type: 'asset', 
+                type: 'asset',
                 parser: {
                     dataUrlCondition: {
                         maxSize: 10 * 1024, // 小于10kb转base64位
                     },
                 },
                 generator: {
-                    filename: 'static/images/[name].[contenthash:8][ext]', // 加上[contenthash:8]
+                    filename: 'static/images/[name].[contenthash][ext]', // 加上[contenthash:8]
                 },
             },
             {

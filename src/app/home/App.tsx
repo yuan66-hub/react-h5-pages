@@ -7,7 +7,7 @@ const Page:FC = () => {
   return (
     <>
      <h1 className={styles['home']}>Hello world!</h1>
-     {/* <img src={vip} alt="" className={styles['vip']} /> */}
+     {/* <img src={vip} alt="" className={styles['vip']} />  */}
     </>
   )
 }

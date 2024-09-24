@@ -17,6 +17,8 @@ const { webpackImageConvert } =require('@yuanjianming/unplugin-image-convert')
 // const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 // const DashboardPlugin = require('webpack-dashboard/plugin')
 // const WebpackObfuscator = require('../plugins/webpack-obfuscator-plugin.js')
+const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
+
 const WebpackObfuscator = require('webpack-obfuscator');
 
 const globAll = require('glob-all')
@@ -165,6 +167,9 @@ const webpackConfig = merge(baseConfig, {
         },
       ],
     }),
+    new DuplicatePackageCheckerPlugin({
+      verbose: true,
+    }), // 检测是否有重复依赖
     webpackImageConvert(),
     new WebpackObfuscator({
       compact: true,//紧凑输出
