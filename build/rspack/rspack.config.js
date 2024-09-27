@@ -8,6 +8,7 @@ const { entry, htmlPlugins } = getEntryTemplate(packages)
 const isDev = process.env.NODE_ENV === 'development'
 const rspack = require('@rspack/core');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const { RsdoctorRspackPlugin } = require('@rsdoctor/rspack-plugin');
 
 const env =
     process.env.MODE === 'development'
@@ -201,6 +202,10 @@ module.exports = {
         modules: [path.resolve(__dirname, '../../node_modules')], // 查找第三方模块只在本项目的node_modules中查找
     },
     plugins: [
+        process.env.RSDOCTOR &&
+        new RsdoctorRspackPlugin({
+          // 插件选项
+        }),
         isDev && new ReactRefreshPlugin(),
         new rspack.ProgressPlugin(),
         new rspack.DefinePlugin({
