@@ -9,6 +9,7 @@
 const path = require('path')
 const fs = require('fs')
 const rspack = require('@rspack/core');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const { MAIN_FILE, PAGESPATH } = require('./constant')
 
@@ -45,8 +46,9 @@ const getEntryTemplate = (packages) => {
   packages.forEach((packageName) => {
     entry[packageName] = path.join(dirPath, packageName, MAIN_FILE)
     htmlPlugins.push(
-        new rspack.HtmlRspackPlugin({
+        new HtmlWebpackPlugin({
         inject: true,
+        template: path.resolve(__dirname, '../../../public/index.html'),
         filename: `${packageName}.html`,
         chunks: ['manifest', 'vendors', packageName],
         cdn: isProduction ? cdn : [],

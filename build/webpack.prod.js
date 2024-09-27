@@ -71,68 +71,6 @@ const webpackConfig = merge(baseConfig, {
           },
         },
       }),
-      // new ImageMinimizerPlugin({
-      //   // deleteOriginalAssets:false,
-      //   minimizer: {
-         
-      //     implementation: ImageMinimizerPlugin.sharpMinify,
-      //     options: {
-      //       encodeOptions: {
-      //         jpeg: {
-      //           // https://sharp.pixelplumbing.com/api-output#jpeg
-      //           quality: 100,
-      //         },
-      //         webp: {
-      //           // https://sharp.pixelplumbing.com/api-output#webp
-      //           lossless: true,
-      //         },
-      //         avif: {
-      //           // https://sharp.pixelplumbing.com/api-output#avif
-      //           lossless: true,
-      //         },
-
-      //         // png by default sets the quality to 100%, which is same as lossless
-      //         // https://sharp.pixelplumbing.com/api-output#png
-      //         png: {
-      //           lossless:true,
-      //           quality:90
-      //         },
-
-      //         // gif does not support lossless compression at all
-      //         // https://sharp.pixelplumbing.com/api-output#gif
-      //         gif: {},
-      //       },
-      //     },
-      //   },
-      //   generator: [
-      //     {
-      //       // You can apply generator using `?as=webp`, you can use any name and provide more options
-      //       type: "asset",
-      //       filename: `[name].[id][ext]`,
-      //       implementation: ImageMinimizerPlugin.sharpGenerate,
-      //       options: {
-      //         encodeOptions: {
-      //           webp: {
-      //             lossless:true
-      //           },
-      //         },
-      //       },
-      //     },
-      //     {
-      //       // You can apply generator using `?as=webp`, you can use any name and provide more options
-      //       preset: "avif",
-      //       implementation: ImageMinimizerPlugin.sharpGenerate,
-      //       options: {
-      //         encodeOptions: {
-      //           avif: {
-      //             lossless:true
-      //           },
-      //         },
-      //       },
-      //     },
-      //   ],
-      // }),
-     
     ],
   },
   plugins: [

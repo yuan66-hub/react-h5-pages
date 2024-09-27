@@ -72,6 +72,10 @@ module.exports = {
                 },
             },
         },
+        minimizer: [
+            new rspack.SwcJsMinimizerRspackPlugin(),
+            new rspack.LightningCssMinimizerRspackPlugin(),
+        ],
         // minimizer:[] 默认使用 rspack.SwcJsMinimizerRspackPlugin 和 rspack.LightningCssMinimizerRspackPlugin
     },
     cache: true,
@@ -82,8 +86,8 @@ module.exports = {
                 type: 'asset/source'
             },
             {
-                include: [path.resolve(__dirname, '../../src')],
-                loader: 'builtin:swc-loader',
+                test: /\.ts$/,
+                loader: 'builtin:swc-loader', // 非 utf8 字符 会编译异常 ，例如图片
                 options: {
                     jsc: {
                         parser: {
@@ -96,23 +100,22 @@ module.exports = {
             {
                 test: /\.jsx$/,
                 use: {
-                  loader: 'builtin:swc-loader',
-                  options: {
-                    jsc: {
-                      parser: {
-                        syntax: 'ecmascript',
-                        jsx: true,
-                      },
+                    loader: 'builtin:swc-loader',
+                    options: {
+                        jsc: {
+                            parser: {
+                                syntax: 'ecmascript',
+                                jsx: true,
+                            },
+                        },
                     },
-                  },
                 },
                 type: 'javascript/auto',
-              },
+            },
             {
-                include: [path.resolve(__dirname, '../../src')],
                 test: /\.tsx$/,
                 use: {
-                    loader: 'builtin:swc-loader',
+                    loader: 'builtin:swc-loader',// 非 utf8 字符 会编译异常 ，例如图片
                     options: {
                         jsc: {
                             parser: {
@@ -151,7 +154,7 @@ module.exports = {
                 ],
             },
             {
-                resource: /\.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
+                test: /\.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
                 type: 'asset',
                 parser: {
                     dataUrlCondition: {
