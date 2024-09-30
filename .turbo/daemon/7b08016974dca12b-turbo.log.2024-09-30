@@ -110,3 +110,11 @@
 2024-09-30T10:39:49.706588Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa\\src\\index.ts")}
 2024-09-30T10:39:49.706600Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("unplugin-prerender-mpa"), path: AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa") }}))
 2024-09-30T10:39:49.726573Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-09-30T10:40:02.506167Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\7b08016974dca12b-turbo.log.2024-09-30")}
+2024-09-30T10:40:02.506178Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-09-30T10:40:06.897822Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa\\node_modules")}
+2024-09-30T10:40:06.897832Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("unplugin-prerender-mpa"), path: AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa") }}))
+2024-09-30T10:40:07.026450Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-09-30T10:40:07.026653Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa")}
+2024-09-30T10:40:07.026659Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("unplugin-prerender-mpa"), path: AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa") }}))
+2024-09-30T10:40:07.026736Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
