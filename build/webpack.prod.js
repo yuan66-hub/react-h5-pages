@@ -18,7 +18,7 @@ const { webpackImageConvert } =require('@yuanjianming/unplugin-image-convert')
 // const DashboardPlugin = require('webpack-dashboard/plugin')
 // const WebpackObfuscator = require('../plugins/webpack-obfuscator-plugin.js')
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
-
+const prerenderMpaPlugin = require("../plugins/unplugin-prerender-mpa/dist/webpack.cjs").default
 const WebpackObfuscator = require('webpack-obfuscator');
 
 const globAll = require('glob-all')
@@ -108,6 +108,7 @@ const webpackConfig = merge(baseConfig, {
     new DuplicatePackageCheckerPlugin({
       verbose: true,
     }), // 检测是否有重复依赖
+    prerenderMpaPlugin({}),
     webpackImageConvert(),
     new WebpackObfuscator({
       compact: true,//紧凑输出

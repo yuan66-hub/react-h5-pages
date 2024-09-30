@@ -1,0 +1,27 @@
+yarn run v1.22.19
+$ tsup
+[34mCLI[39m Building entry: src/index.ts, src/types.ts, src/webpack.ts
+[34mCLI[39m Using tsconfig: ..\..\tsconfig.json
+[34mCLI[39m tsup v8.3.0
+[34mCLI[39m Using tsup config: E:\myProject\react-h5-pages\plugins\unplugin-prerender-mpa\tsup.config.js
+[34mCLI[39m Target: esnext
+[34mCLI[39m Cleaning output folder
+[34mCJS[39m Build start
+[34mESM[39m Build start
+[32mCJS[39m [1mdist\webpack.cjs [22m[32m1.29 KB[39m
+[32mCJS[39m [1mdist\index.cjs   [22m[32m1.42 KB[39m
+[32mCJS[39m [1mdist\types.cjs   [22m[32m744.00 B[39m
+[32mCJS[39m ⚡️ Build success in 41ms
+[32mESM[39m [1mdist\types.js   [22m[32m0 B[39m
+[32mESM[39m [1mdist\index.js   [22m[32m397.00 B[39m
+[32mESM[39m [1mdist\webpack.js [22m[32m424.00 B[39m
+[32mESM[39m ⚡️ Build success in 79ms
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 9603ms
+[32mDTS[39m [1mdist\index.d.cts   [22m[32m323.00 B[39m
+[32mDTS[39m [1mdist\webpack.d.cts [22m[32m187.00 B[39m
+[32mDTS[39m [1mdist\types.d.cts   [22m[32m49.00 B[39m
+[32mDTS[39m [1mdist\index.d.ts    [22m[32m322.00 B[39m
+[32mDTS[39m [1mdist\webpack.d.ts  [22m[32m186.00 B[39m
+[32mDTS[39m [1mdist\types.d.ts    [22m[32m49.00 B[39m
+Done in 13.27s.
