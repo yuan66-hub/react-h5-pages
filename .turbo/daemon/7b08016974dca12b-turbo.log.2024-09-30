@@ -118,3 +118,7 @@
 2024-09-30T10:40:07.026653Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa")}
 2024-09-30T10:40:07.026659Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("unplugin-prerender-mpa"), path: AnchoredSystemPathBuf("plugins\\unplugin-prerender-mpa") }}))
 2024-09-30T10:40:07.026736Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-09-30T10:40:11.204412Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo\\daemon\\7b08016974dca12b-turbo.log.2024-09-30")}
+2024-09-30T10:40:11.204422Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-09-30T10:41:24.603332Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".gitignore")}
+2024-09-30T10:41:24.603343Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))

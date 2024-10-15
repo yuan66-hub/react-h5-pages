@@ -72,6 +72,10 @@ const webpackConfig = merge(baseConfig, {
         },
       }),
     ],
+    // 分割webpack 多入口运行时的文件
+    runtimeChunk: {
+      name: (entrypoint) => `runtime~${entrypoint.name}`,
+    },
   },
   plugins: [
     // new StaticSiteGeneratorPlugin({
@@ -110,6 +114,7 @@ const webpackConfig = merge(baseConfig, {
     }), // 检测是否有重复依赖
     prerenderMpaPlugin({}),
     webpackImageConvert(),
+    // 代码混淆
     new WebpackObfuscator({
       compact: true,//紧凑输出
       controlFlowFlattening: true,//启用代码控制流扁平化。控制流扁平化是源代码的结构转换，它阻碍了程序的理解

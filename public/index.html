@@ -22,7 +22,9 @@
 
 <body>
   <!-- 容器节点 -->
-  <div id="root"></div>
+  <div id="root">
+    <!-- shell -->
+  </div>
   <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
     <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
     <% } %>

@@ -8,7 +8,7 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = options => 
         compiler.hooks.done.tap('unplugin-prerender-mpa', async () => {
             /**
              *  1. 启动无头浏览器返回html
-             *  2. fs 写文件到dist 文件夹
+             *  2. 使用fs模块生成文件到dist文件夹
              */
         })
     },
